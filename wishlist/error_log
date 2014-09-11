@@ -1,0 +1,14 @@
+[30-Aug-2014 10:31:23] PHP Parse error:  syntax error, unexpected T_STRING in /home/mojolead/public_html/wishlist/index.php on line 2
+[30-Aug-2014 10:39:14] PHP Fatal error:  Class 'wlmapiclass' not found in /home/mojolead/public_html/wishlist/index.php on line 3
+[30-Aug-2014 11:30:44] PHP Fatal error:  Class 'wlmapiclass' not found in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 82
+[30-Aug-2014 11:43:21] PHP Warning:  Missing argument 3 for wlmapiclass::_request(), called in /home/mojolead/public_html/wishlist/includes/wlmapiclass.php on line 138 and defined in /home/mojolead/public_html/wishlist/includes/wlmapiclass.php on line 37
+[30-Aug-2014 11:52:24] PHP Warning:  Missing argument 3 for wlmapiclass::_request(), called in /home/mojolead/public_html/wishlist/includes/wlmapiclass.php on line 144 and defined in /home/mojolead/public_html/wishlist/includes/wlmapiclass.php on line 43
+[30-Aug-2014 18:08:43 UTC] PHP Warning:  include(/wp-includes/class-phpass.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 140
+[30-Aug-2014 18:08:43 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/wp-includes/class-phpass.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 140
+[30-Aug-2014 13:17:31 America/Chicago] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ']' in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 205
+[30-Aug-2014 13:18:17 America/Chicago] PHP Parse error:  syntax error, unexpected $end in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 205
+[30-Aug-2014 18:36:35 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, string given in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 148
+[30-Aug-2014 18:37:25 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, string given in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 148
+[30-Aug-2014 18:38:02 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, string given in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 149
+[30-Aug-2014 18:38:57 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 2 given in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php on line 149
+[30-Aug-2014 19:33:48 UTC] PHP Fatal error:  Cannot redeclare add_user_meta() (previously declared in /home/mojolead/public_html/wishlist/wishlist-infusionsoft-bridge.php:233) in /home/mojolead/public_html/members/wp-includes/user.php on line 1003
