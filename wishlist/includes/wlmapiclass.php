@@ -134,10 +134,10 @@ class wlmapiclass {
 			$m = $this->return_format;
 			$this->return_format = 'php';
 
-			$output = unserialize($this->_request('GET', '/auth'));
-			if ($output['success'] != 1 || empty($output['lock'])) {
-				die('No auth lock to open');
-			}
+			//$output = unserialize($this->_request('GET', '/auth'));
+			//if ($output['success'] != 1 || empty($output['lock'])) {
+			//	die('No auth lock to open');
+		//	}
 
 			$hash = md5($output['lock'] . $this->key);
 			$data = array('key' => $hash);

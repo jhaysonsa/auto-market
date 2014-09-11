@@ -11,7 +11,7 @@
  * @param string 	$membership 	the wishlist memeber service
  * @param string 	$action 		the wishlist memeber service
  * @param string 	$level 			the wishlist membership level
- * @example http://mojoleadmastery.com/wishlist/wishlist-infusionsoft-bridge.php?action=add&contact_id=~57987~&membership=mojoleadmastery&level=
+ * @example http://mojoleadmastery.com/wishlist/wishlist-infusionsoft-bridge.php?action=add&contact_id=~57947~&membership=mojoleadmastery&level=1409152584
  *  Free Trial Level =
  *  Monthly Level =
  *  Annual Level =
@@ -31,15 +31,14 @@ if ($key != "5ae8c42d96a15001cfd6b70de330b70b"){
 
 
 $action = preg_replace("/[^A-Za-z0-9?!]/",'', $_GET['action']);
-if ($action == "Free Trial"){
+if ($action == ""){
 	die("No action specified.");
 }
 
-$contact_id = preg_replace("/[^0-9?!]/",'', $_POST['Id']);
-$contact_id = 57987;
-if ($contact_id == ""){
-	die("No contact ID was specified.");
-}
+//$contact_id = preg_replace("/[^0-9?!]/",'', $_POST['Id']);
+//if ($contact_id == ""){
+//	die("No contact ID was specified.");
+//}
 
 $membership = preg_replace("/[^A-Za-z0-9?!]/",'', $_GET['membership']);
 $membership = 'mojoleadmastery';
@@ -90,7 +89,9 @@ if ($level == ""){
 //*===============================
 //* GET USER INFORMATION FROM IS
 //*===============================	
-
+    $fields2 = array('Id', 'FirstName', 'LastName');
+   $IS_DATA2 = $infusion->findByEmail($email, $returnFields);
+   print_r($IS_DATA2);
 	$fields = array('FirstName', 'LastName','Email','Phone1','Company','Username','Password','_WishListId','_WishListLevels');
 	$IS_DATA = $infusion->loadCon((int)$contact_id, $fields);
 	
@@ -224,12 +225,12 @@ if ($level == ""){
 	//* WISHLIST FAILURE
 	//*===============================		
 	}
-	else
-	{
-		echo "\n".'<br/>Error Code: ' . $wlresponse['ERROR_CODE'];
-		echo "\n".'<br/>';
-		echo "\n".'Error Description: ' . $wlresponse['ERROR'];
-	}
+	//else
+//{
+//		echo "\n".'<br/>Error Code: ' . $wlresponse['ERROR_CODE'];
+//		echo "\n".'<br/>';
+//		echo "\n".'Error Description: ' . $wlresponse['ERROR'];
+//	}
 function add_user_meta_val($user_meta_values=array(),$user_id)
 {
 	$db_connect=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)or die(mysqli_error('cant connect to database'));
